@@ -1,0 +1,288 @@
+<!-- <div class="container border border-secondary my-3 py-3">
+  <form formgroup="form"> -->
+    <!-- nested form groups -->
+    <!-- <div formGroupName="account" class="my-5"> -->
+      <!-- Validation form input upon Submit -->
+      <!-- <div *ngIf="form.errors" class="alert alert-danger">
+        The username or password is incorrect
+      </div>
+
+      <div class="row">
+        <div class="form-group col-6">
+          <label for="names">First Name:</label>
+          <input
+            #fname
+            name="fn"
+            formControlName="names"
+            id="fnam"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group col-6">
+          <label for="names">Last Name:</label>
+          <input
+            #lname
+            name="ln"
+            formControlName="names"
+            id="lname"
+            type="text"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-9">
+          <label for="LogId">Login ID</label>
+          <input
+            #logid
+            name="log"
+            formControlName="LogId"
+            id="logid"
+            type="text"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-6">
+          <label for="password">Password</label>
+          <input
+            #pass
+            name="pword"
+            formControlName="password"
+            id="pass"
+            type="password"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group col-6">
+          <label for="password">Confirm Password</label>
+          <input
+            #cpass
+            formControlName="password"
+            id="cpass"
+            type="password"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label class="display-6">Gender</label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label mr-3" for="flexRadioDefault1">
+              Male
+            </label>
+
+            <input
+              class="form-check-input ml-4"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+              checked
+            />
+            <label class="form-check-label ml-5" for="flexRadioDefault2">
+              Female
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col">
+          <label for="birthday">Date of Birth:</label>
+          <input class="mx-2" type="date" id="birthday" name="birthday" />
+        </div>
+
+        <div class="col">
+          <label for="mobile">Mobile No:</label>
+          <input
+            class="mx-2"
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+          />
+        </div>
+      </div> -->
+      <!-- [disabled]='!form.valid' -->
+
+      <!-- <div class="row mt-2">
+        <div class="col">
+          <button
+            class="btn btn-primary my-3"
+            type="submit"
+            (click)="login()"
+            routerLink="/admin"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div> -->
+
+
+<!-- <div class="container">
+  <form #staffform="ngForm" (ngSubmit)="saveform(staffform.value)">
+    <input type="text" ngModel name="fn" placeholder="firstname">
+    <br>
+    <input type="password" ngModel name="pw" placeholder="password"><br>
+    <button>add</button>
+  </form>
+</div> -->
+
+
+
+<app-adminworks></app-adminworks>
+
+<div class="container border border-secondary my-3 py-3">
+  <div class="row">
+    <p class="display-4"><b>Add Staff</b></p>
+  </div>
+  <form #uform="ngForm" (ngSubmit)="saveform(uform.value); ">
+    <!-- nested form groups -->
+    <div class="my-5">
+      <!-- Validation form input upon Submit -->
+      <!-- <div *ngIf="form.errors" class="alert alert-danger">
+        The username or password is incorrect
+      </div> -->
+
+      <div class="row">
+        <div class="col">
+          <label for="names" class="form-label mx-2">First Name:</label>
+          <input
+            #fname
+            ngModel
+            name="firstname"
+            id="fnam"
+            type="text"            
+            class="form-control"
+          />
+        </div>
+        <div class="col">
+          <label for="names" class="mx-2">Last Name:</label>
+          <input
+            #lname
+            ngModel
+            name="lastname"
+            id="lname"
+            type="text"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+
+      <div class="row">
+
+        <div class="col">
+          <label for="LogId" class="mx">Login ID</label>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <input
+            #logid
+            ngModel
+            name="loginID"
+            id="logid"
+            type="email"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-5">
+          <label for="password">Password</label>
+          <input
+            #pass
+            ngModel
+            name="password"
+            id="pass"
+            type="password"
+            class="form-control"
+          />
+        </div>
+
+        <div class="col-5">
+          <label for="password">Confirm Password</label>
+          <input
+            #cpass
+            id="cpass"
+            type="password"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="row">
+          <label class="mx-3">Gender</label>
+        <div class="col">
+        <div class="form-check">
+          <label class="radio-inline">
+          <input class="form-check-input" type="radio" name="gender" ngModel id="flexRadioDefault1" value="Male">
+            Male
+          </label>
+        </div>
+        <div class="form-check">
+        <label class="radio-inline">
+          <input class="form-check-input" type="radio" name="gender" ngModel id="flexRadioDefault2" value="Female">
+            Female
+          </label>
+        </div>
+        </div>
+      </div>
+
+      <div class="row ">
+        <div class="col">
+          <label for="birthday">Date of Birth:</label>
+          <input 
+            class="" 
+            type="date" 
+            id="birthday" 
+            name="dob" 
+            ngModel
+            class="form-control"
+          />
+        </div>
+
+        <div class="col">
+          <label for="mobile">Mobile No:</label>
+          <input
+            class="mx-2"
+            type="tel"
+            id="phone"
+            name="mobilenum"
+            ngModel
+            pattern="[0-9]{10}"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <!-- [disabled]='!form.valid' -->
+
+      <div class="row mt-2">
+        <div class="col">
+          <button
+            class="btn btn-primary my-3" >
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

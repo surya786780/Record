@@ -1,0 +1,49 @@
+<div class="container">
+    <form [formGroup]="form"> 
+        <!-- nested form groups -->
+    <div formGroupName="account" class="my-5">
+        <!-- Validation form input upon Submit -->
+        <div *ngIf="form.errors" class="alert alert-danger">
+            The username or password is incorrect
+        </div>
+    
+        <div class="form-group col-9">
+            <label for="username">Username</label>
+            <input
+                #uname
+                formControlName="username"
+                id="username" 
+                type="text" 
+                class="form-control">
+                
+                <!-- Showing a loader Imagej  -->
+                <!-- <div *ngIf="username.pending">Checking for uniqueness...</div> -->
+                <!-- ngIf inside username is type script class -->
+            <!-- <div 
+            *ngIf="username.touched && username.invalid" 
+                class="alert alert-danger">
+                <div *ngIf="username.errors.required">Username is required</div>
+                <div *ngIf="username.errors.minlength">Username minimum {{username.errors.minlength.requiredLength}} Characters required</div>
+                <div *ngIf="username.errors.cannotContainSpace">Username Can't contain space</div>
+                <div *ngIf="username.errors.shouldBeUnique">Username is already taken</div>
+           
+            </div>  -->
+        </div> 
+        <div class="form-group col-9">
+            <label for="password">Password</label>
+            <input 
+                #pass
+            
+                formControlName="password"
+                id="password" 
+                type="text" 
+                class="form-control">
+        </div>
+    
+    <!-- [disabled]='!form.valid' -->
+        <button  class="btn btn-primary mx-3" type="submit" (click)="login(uname.value,pass.value)" routerLink="/admin">            
+            Sign Up
+           </button>
+    </div>
+    </form>
+</div>
