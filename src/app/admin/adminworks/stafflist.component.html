@@ -21,6 +21,21 @@
           </tr>
         </thead>
         <tbody *ngFor="let rec of lists;index as i">
+          <tr id="row">
+            <td>
+              <input type="checkbox" [checked]="check">
+            </td>
+            <th scope="row">0</th>
+            <td>Ajith</td>
+            <td>kumar</td>
+            <td>Ajith123@gmail.com</td>
+            <td>6635241190</td>
+            <td>1999-01-01</td>
+            <td>Male</td>
+            <td>
+              <button type="button" class="btn-sm btn-danger" (click)="(rec.id)">Delete</button>
+            </td>
+          </tr>
           <tr id="trow">
             <td>
               <input type="checkbox" [checked]="check">
@@ -33,7 +48,7 @@
             <td>{{rec.dob}}</td>
             <td>{{rec.gender}}</td>
             <td>
-                <button type="button" class="btn-sm btn-info me-2" (click)="Updatedata()">Update</button>
+                <!-- <button type="button" class="btn-sm btn-info me-2" (click)="Updatedata()">Update</button> -->
                 <button type="button" class="btn-sm btn-danger" (click)="deletedata(rec.id)">Delete</button>
             </td>
           </tr>

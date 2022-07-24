@@ -10,7 +10,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AddStaffComponent implements OnInit {
 
-  url = "http://localhost:3000/staffrecords";
+  url = "http://localhost:3004/staffrecords";
   constructor(private route: Router,private http:HttpClient) { }
 
   ngOnInit(): void {

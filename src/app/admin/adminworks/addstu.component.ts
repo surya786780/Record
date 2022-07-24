@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AddStuComponent implements OnInit {
 
-  url = "http://localhost:3000/studentrecords";
+  url = "http://localhost:3004/studentrecords";
 
   constructor(private http: HttpClient) { }
 

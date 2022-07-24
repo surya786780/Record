@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StuListComponent implements OnInit {
 
-  url = "http://localhost:3000/studentrecords";
+  url = "http://localhost:3004/studentrecords";
   lists:any=[];
   check=false;
   all(event:any){

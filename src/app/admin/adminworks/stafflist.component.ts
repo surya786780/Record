@@ -9,7 +9,7 @@ import {HttpClient } from '@angular/common/http';
 export class StaffListComponent implements OnInit {
 
   
-  url = "http://localhost:3000/staffrecords";
+  url = "http://localhost:3004/staffrecords";
   lists:any=[];
   check=false;
   all(event:any){
@@ -28,10 +28,6 @@ export class StaffListComponent implements OnInit {
             this.lists = data;
             // console.log(this.lists);
           });
-   }
-
-   Updatedata(){
-
    }
 
    
