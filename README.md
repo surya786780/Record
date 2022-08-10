@@ -1,3 +1,7 @@
+LINK for the application  --  https://surya786780.github.io/Record/
+
+
+
 # AngualarOnlineAttendance
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
